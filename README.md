@@ -65,6 +65,30 @@ Dobby Debater is an interactive AI-powered debate bot built using the Dobby API.
     ```
 
 ### File Descriptions
+```
+DobbyDebater/
+├── README.md
+├── app/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── debate_engine.py
+│   └── responses.py
+├── requirements.txt
+├── templates/
+│   ├── base.html
+│   ├── home.html
+│   ├── debate.html
+├── static/
+│   ├── css/
+│   │   └── styles.css
+│   └── js/
+│       └── script.js
+├── tests/
+│   ├── test_debate_engine.py
+│   └── test_responses.py
+└── .env
+```
+
 
 - `main.py`: Entry point for the Flask app.
 - `debate_engine.py`: Core logic for generating debate arguments.

@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.ear
+*.class
+*.jar
+*.war
+*.ear
+*.class
+*.jar
+*.war
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Flask specific
+instance/
+.webassets-cache
+
+# Scrapy specific
+.scrapy
+
+
+#
+.python-version
+
+# dotenv
+.env
+.env.*
+
+# virtualenv
+.venv/
+venv/
+ENV/
+*.war
+*.ear
+*.class
+*.jar
+*.war
+*.ear
+*.class
+*.jar
+env.bak/
+venv.bak/
