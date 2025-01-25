@@ -35,3 +35,57 @@ Dobby Debater is an interactive AI-powered debate bot built using the Dobby API.
    ```bash
    git clone https://github.com/lifee77/dobby-debater
    cd dobby-debator
+
+2. Create and activate a virtual environment:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
+
+3. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Set up your `.env` file:
+    ```env
+    API_KEY=your_fireworks_api_key
+    ```
+
+### Running the App
+
+1. Start the Flask server:
+    ```bash
+    python app/main.py
+    ```
+
+2. Open your browser and go to:
+    ```arduino
+    http://127.0.0.1:5000
+    ```
+
+### File Descriptions
+
+- `main.py`: Entry point for the Flask app.
+- `debate_engine.py`: Core logic for generating debate arguments.
+- `responses.py`: Helper functions for handling and formatting responses.
+- `templates/`: HTML templates for the app.
+- `static/`: CSS and JavaScript files for UI styling and interaction.
+- `tests/`: Unit tests for the backend.
+
+### Example Usage
+
+1. Start the app and open the home page.
+2. Select a topic (e.g., "Freedom of Speech") or type your own.
+3. Engage in a debate with Dobby.
+4. Adjust the tone or style mid-debate for a dynamic experience.
+
+### Future Enhancements
+
+- Add multiplayer mode for group debates.
+- Implement voice-to-text and text-to-voice features.
+- Introduce a scoring system to rate user and Dobby's debate points.
+
+### License
+
+This project is licensed under the MIT License. See `LICENSE` for more details.
