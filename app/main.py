@@ -15,15 +15,18 @@ def home():
 def debate():
     user_input = request.json.get('user_input')
     topic = request.json.get('topic')
-    response = generate_response(user_input, topic)
+    model = request.json.get('model')
+    response = generate_response(user_input, topic, model)
     return jsonify({'response': response})
 
 @app.route('/instructor', methods=['POST'])
 def instructor():
     user_input = request.json.get('user_input')
     topic = request.json.get('topic')
-    feedback = generate_feedback(user_input, topic)
+    model = request.json.get('model')
+    feedback = generate_feedback(user_input, topic, model)
     return jsonify({'feedback': feedback})
+
 
 if __name__ == '__main__':
     app.run(debug=True)

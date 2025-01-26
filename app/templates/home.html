@@ -18,11 +18,17 @@
             <p>Select a mode to begin.</p>
         </div>
         <form id="debate-form" style="display: none;">
+            <label for="model">Select Model:</label>
+            <select id="model">
+                <option value="accounts/sentientfoundation/models/dobby-mini-leashed-llama-3-1-8b#accounts/sentientfoundation/deployments/22e7b3fd">Dobby Leashed</option>
+                <option value="accounts/sentientfoundation/models/dobby-mini-unhinged-llama-3-1-8b#accounts/sentientfoundation/deployments/81e155fc">Dobby Unhinged</option>
+            </select>
+            <br><br>
             <label for="topic">Choose a Topic:</label>
             <select id="topic">
-                <option value="Freedom of Speech">Freedom of Speech</option>
+                <option value="Freedom of Speech [Only Against]">Freedom of Speech</option>
                 <option value="Artificial Intelligence">Artificial Intelligence</option>
-                <option value="Cryptocurrency">Cryptocurrency</option>
+                <option value="Cryptocurrency [Only Against]">Cryptocurrency</option>
                 <option value="Ethics in Technology">Ethics in Technology</option>
             </select>
             <br><br>

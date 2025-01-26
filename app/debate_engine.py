@@ -12,13 +12,13 @@ HEADERS = {
     "Content-Type": "application/json",
 }
 
-def generate_response(user_input, topic):
+def generate_response(user_input, topic, model):
     """
-    Generates a debate response from Dobby as an opponent.
+    Generates a debate response from the selected Dobby model as an opponent.
     """
     try:
         payload = {
-            "model": "accounts/sentientfoundation/models/dobby-mini-unhinged-llama-3-1-8b#accounts/sentientfoundation/deployments/81e155fc",
+            "model": model,
             "messages": [
                 {
                     "role": "user",
@@ -33,13 +33,13 @@ def generate_response(user_input, topic):
     except Exception as e:
         return f"Error: {str(e)}"
 
-def generate_feedback(user_input, topic):
+def generate_feedback(user_input, topic, model):
     """
     Provides constructive feedback on the user's debate argument.
     """
     try:
         payload = {
-            "model": "accounts/sentientfoundation/models/dobby-mini-unhinged-llama-3-1-8b#accounts/sentientfoundation/deployments/81e155fc",
+            "model": model,
             "messages": [
                 {
                     "role": "user",
