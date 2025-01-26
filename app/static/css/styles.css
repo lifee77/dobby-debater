@@ -226,3 +226,18 @@ button#instructor-mode-btn:hover {
     color: #555;
     margin-top: 10px;
 }
+
+/* Rendered Text Styling */
+.rendered-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    white-space: pre-wrap; /* Preserve spacing and line breaks */
+}
+
+.rendered-text b {
+    font-weight: bold;
+}
+
+.rendered-text i {
+    font-style: italic;
+}
