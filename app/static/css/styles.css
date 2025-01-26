@@ -112,31 +112,40 @@ button:disabled {
     word-wrap: break-word;
 }
 
-/* Buttons Row */
-button#debate-mode-btn,
-button#instructor-mode-btn {
+/* Button Row */
+.mode-btn {
     display: inline-block;
     width: auto;
     margin: 10px 5px;
     padding: 12px 25px;
     border-radius: 20px;
     font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-btn.active {
+    background-color: #28a745; /* Green for active */
+    color: white;
+    font-weight: bold;
+    border: 2px solid #218838;
 }
 
 button#debate-mode-btn {
-    background: #28a745;
-}
-
-button#debate-mode-btn:hover {
-    background: #218838;
-}
-
-button#instructor-mode-btn {
     background: #17a2b8;
 }
 
-button#instructor-mode-btn:hover {
+button#debate-mode-btn:hover {
     background: #138496;
+}
+
+button#instructor-mode-btn {
+    background: #28a745;
+}
+
+button#instructor-mode-btn:hover {
+    background: #218838;
 }
 
 /* Responsive Design */
@@ -156,9 +165,15 @@ button#instructor-mode-btn:hover {
         font-size: 0.9rem;
     }
 
-    button#debate-mode-btn,
-    button#instructor-mode-btn {
+    .mode-btn {
         width: 100%;
         margin: 10px 0;
     }
+}
+
+#mode-indicator p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+    margin-top: 10px;
 }

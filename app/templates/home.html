@@ -10,11 +10,13 @@
     <div class="container">
         <h1>Dobby Debater</h1>
         <p>Choose your mode: Debate with Dobby or receive feedback from Dobby the Instructor.</p>
-        <div>
-            <button id="debate-mode-btn">Debate Mode</button>
-            <button id="instructor-mode-btn">Instructor Mode</button>
+        <div class="button-row">
+            <button id="debate-mode-btn" class="mode-btn">Debate Mode</button>
+            <button id="instructor-mode-btn" class="mode-btn">Instructor Mode</button>
         </div>
-        <br>
+        <div id="mode-indicator">
+            <p>Select a mode to begin.</p>
+        </div>
         <form id="debate-form" style="display: none;">
             <label for="topic">Choose a Topic:</label>
             <select id="topic">
