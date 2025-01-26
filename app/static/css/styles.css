@@ -42,7 +42,7 @@ h2 {
 /* Paragraphs */
 p {
     font-size: 1rem;
-    color: #666;
+    color: #555;
     margin-bottom: 20px;
 }
 
@@ -57,13 +57,15 @@ label {
 
 textarea,
 select,
+input,
 button {
     width: 100%;
     margin-bottom: 20px;
 }
 
 textarea,
-select {
+select,
+input {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -73,7 +75,8 @@ select {
 }
 
 textarea:focus,
-select:focus {
+select:focus,
+input:focus {
     border-color: #007bff;
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
 }
@@ -112,7 +115,33 @@ button:disabled {
     word-wrap: break-word;
 }
 
-/* Button Row */
+/* Manual Topic Styling */
+#manual-topic-container {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.manual-topic-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.manual-topic-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.manual-topic-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Mode Buttons */
 .mode-btn {
     display: inline-block;
     width: auto;
@@ -129,7 +158,7 @@ button:disabled {
     background-color: #28a745; /* Green for active */
     color: white;
     font-weight: bold;
-    border: 2px solid #218838;
+    border: 3px solid #218838;
 }
 
 button#debate-mode-btn {
@@ -148,6 +177,25 @@ button#instructor-mode-btn:hover {
     background: #218838;
 }
 
+/* Rendered Response Styling */
+.rendered-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    white-space: pre-wrap; /* Preserves spacing and line breaks */
+}
+
+.rendered-text b {
+    font-weight: bold;
+}
+
+.rendered-text i {
+    font-style: italic;
+}
+
+.rendered-text u {
+    text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -161,6 +209,7 @@ button#instructor-mode-btn:hover {
 
     textarea,
     select,
+    input,
     button {
         font-size: 0.9rem;
     }
