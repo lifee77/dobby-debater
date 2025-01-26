@@ -24,6 +24,15 @@ function activateButton(button) {
     button.classList.add('active');
 }
 
+// Format the response text to render bold and italic
+function formatResponseText(text) {
+    // Replace **text** with <b>text</b>
+    text = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
+    // Replace *text* with <i>text</i>
+    text = text.replace(/\*(.*?)\*/g, "<i>$1</i>");
+    return text;
+}
+
 // Handle Debate Mode Button Click
 debateModeBtn.addEventListener('click', () => {
     mode = 'debate';
@@ -96,7 +105,8 @@ debateForm.addEventListener('submit', async (e) => {
         }
 
         const data = await res.json();
-        responseText.innerHTML = `<span class="rendered-text">${mode === 'debate' ? data.response : data.feedback}</span>`;
+        const formattedText = formatResponseText(mode === 'debate' ? data.response : data.feedback);
+        responseText.innerHTML = `<span class="rendered-text">${formattedText}</span>`;
     } catch (err) {
         // Handle errors
         responseText.innerHTML = "Error: " + err.message;
