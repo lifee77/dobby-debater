@@ -43,10 +43,15 @@ def generate_feedback(user_input, topic, model):
             "messages": [
                 {
                     "role": "user",
-                    "content": f"You are a debate instructor helping a student improve their argumentation skills. The topic is '{topic}'. Analyze the user's argument and provide constructive feedback:\n\nUser's Argument: {user_input}\nInstructor Feedback:",
+                    "content": (
+                        f"You are a skilled debate instructor helping a student improve their argumentation skills. "
+                        f"Critically evaluate the student's argument on the topic '{topic}' and provide specific, actionable feedback. "
+                        f"Identify the strengths of their argument, point out weaknesses, and suggest ways to strengthen their reasoning, evidence, and delivery:\n\n"
+                        f"User's Argument: {user_input}\n\nInstructor Feedback:"
+                    ),
                 }
             ],
-            "max_tokens": 200,
+            "max_tokens": 300,
         }
         response = requests.post(BASE_URL, headers=HEADERS, json=payload)
         response.raise_for_status()  # Raise an error for bad HTTP responses
